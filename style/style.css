@@ -1,0 +1,138 @@
+@font-face {
+    font-family: menuNumbers;
+    src: url(../assets/fonts/constan.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#main {
+    width: 1200px;
+    height: 675px;
+    margin: 20px auto;
+    background: #000;
+    position: relative;
+}
+
+#firstStartPage {
+    width: 100%;
+    height: 100%;
+    background: url(../assets/img/image.png) no-repeat 50% / contain;
+}
+
+#firstStartPage > .PlayBottom {
+    width: 200px;
+    height: 100px;
+    bottom: 110px;
+    left: 250px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#levelSelect {
+    width: 100%;
+    height: 100%;
+    background: url(../assets/img/Layer_15_0.png) no-repeat 50% / 100%;
+    border: 1px solid transparent;
+    font-family: menuNumbers;
+}
+
+#levelSelect > #mapSlider {
+    width: 700px;
+    height: 550px;
+    margin: 100px auto 0;
+    overflow: hidden;
+}
+
+#levelSelect > #mapSlider > .gallery {
+    height: 400px;
+    width: 100%;
+    background: url(../assets/img/mapSlider/01.png) no-repeat 50% / contain;
+}
+
+#levelSelect > .mapMoveBtn {
+    width: 80px;
+    height: 150px;
+    background: no-repeat 50% / contain;
+    position: absolute;
+    top: 180px;
+    cursor: pointer;
+}
+
+#levelSelect > .mapMoveRightBtn {
+    right: 150px;
+    background-image: url(../assets/img/mapSlider/right.png);
+}
+
+#levelSelect > .mapMoveLeftBtn {
+    left: 150px;
+    background-image: url(../assets/img/mapSlider/lret.png);
+}
+
+#levelSelect > .menuPlayerItems {
+    width: fit-content;
+    min-width: 100px;
+    height: 70px;
+    background: no-repeat 0 50% / 60px;
+    position: absolute;
+    left: 5px;
+    text-indent: 65px;
+    line-height: 70px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+#levelSelect > #coin {
+    background-image: url(../assets/img/tien.png);
+    top: 0px;
+    color: #ffe300;
+}
+
+#levelSelect > #diamond {
+    background-image: url(../assets/img/kim_cuong.png);
+    top: 70px;
+    color: #01f2fd;
+}
+
+#levelSelect > #letter {
+    background-image: url(../assets/img/cuon-giay.png);
+    top: 140px;
+    color: #00ff21;
+}
+
+#levelSelect > #settings {
+    background: url(../assets/img/settings.png) no-repeat 50% / contain;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#levelSelect > #shopup {
+    background: url(../assets/img/shopup.png) no-repeat 50% / contain;
+    width: 150px;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    cursor: pointer;
+}
