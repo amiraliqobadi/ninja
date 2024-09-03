@@ -28,37 +28,49 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 200px;
-    height: 200px;
-}
-.jump {
-    position: absolute;
-    width: 75px;
-    right: 0;
-    bottom: 0;
-    margin: 15px;
-}
-.ability {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-}
-.ability_4 {
-    bottom: 50%;
-    margin: 20px;
-}
-.ability_1 {
-    bottom: 50%;
-    right: 30%;
-}
-.ability_2 {
-    bottom: 30%;
-    right: 47%;
+    opacity: .8;
 }
 
-.ability_5 {
-    right: 50%;
+.ability{
+    position: absolute;
+    height: 100px;
+    cursor: pointer;
+    background: no-repeat 50% / contain;
+    z-index: 5;
+}
+
+.jump {
+    position: absolute;
+    height: 100px;
+    right: 50px;
+    bottom: 50px;
+    height: 130px;
+    width: 130px;
+    background: url(../img/level_one/up_d1.png) no-repeat 50% / contain;
+}
+
+.miniabs{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+}
+
+.a1 {
+    right: 230px;
+    bottom: 50px;
+    background-image: url(../img/level_one/icon_dash_0.png);
+}
+.a2 {
+    right: 50px;
+    bottom: 50px;
+    background-image: url(../img/level_one/icon_bienhinh_0.png);
+    transform: translate(-125px, -125px);
+}
+.a3 {
+    right: 50px;
+    bottom: 50px;
+    background-image: url(../img/level_one/icon_phitieu_0.png);
+    transform: translateY(-180px);
 }
 .floor {
     position: absolute;
@@ -87,17 +99,11 @@
 .ninja {
     width: 200px;
     height: 100px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 200;
+    background: no-repeat center / cover;
+    z-index: 1;
     position: absolute;
     bottom: 26%;
     left: 0;
-    color: black;
-
-    transition: left 0.2s linear;
 }
 
 .ninja_stand_right {
@@ -106,7 +112,7 @@
 }
 
 .ninja_walk_right {
-    animation: walkRight 1s steps(6) forwards;
+    animation: walkRight .3s alternate infinite;
 }
 
 @keyframes walkRight {

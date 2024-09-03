@@ -103,45 +103,45 @@ playBtn.addEventListener("click", () => {
         levelAudio.volume = 0;
         levelContainer.style.display = "block";
         levelOne.style.display = "block";
-    }, 3000);
+    }, 10);
 });
 
-const background1 = "url('../img/level_one/co2.png')";
-const background2 = "url('../img/level_one/co1.png')";
-const background3 = "url('../img/level_one/trucxanhdam1.png')";
-const background4 = "url('../img/level_one/trucxanhdam2.png')";
-const background5 = "url('../img/level_one/trucxanhdam3.png')";
+// const background1 = "url('../img/level_one/co2.png')";
+// const background2 = "url('../img/level_one/co1.png')";
+// const background3 = "url('../img/level_one/trucxanhdam1.png')";
+// const background4 = "url('../img/level_one/trucxanhdam2.png')";
+// const background5 = "url('../img/level_one/trucxanhdam3.png')";
 
-const numRepetitions1 = Math.floor(Math.random() * 5) + 1;
-const numRepetitions2 = Math.floor(Math.random() * 5) + 1;
-const numRepetitions3 = Math.floor(Math.random() * 5) + 1;
-const numRepetitions4 = Math.floor(Math.random() * 5) + 1;
-const numRepetitions5 = Math.floor(Math.random() * 5) + 1;
+// const numRepetitions1 = Math.floor(Math.random() * 5) + 1;
+// const numRepetitions2 = Math.floor(Math.random() * 5) + 1;
+// const numRepetitions3 = Math.floor(Math.random() * 5) + 1;
+// const numRepetitions4 = Math.floor(Math.random() * 5) + 1;
+// const numRepetitions5 = Math.floor(Math.random() * 5) + 1;
 
-const backgrounds = [];
-const bambooBackgrounds = [];
+// const backgrounds = [];
+// const bambooBackgrounds = [];
 
-for (let i = 0; i < numRepetitions1; i++) {
-    backgrounds.push(background1);
-}
-for (let i = 0; i < numRepetitions2; i++) {
-    backgrounds.push(background2);
-}
+// for (let i = 0; i < numRepetitions1; i++) {
+//     backgrounds.push(background1);
+// }
+// for (let i = 0; i < numRepetitions2; i++) {
+//     backgrounds.push(background2);
+// }
 
-const addRepetitions = (background, numRepetitions) => {
-    for (let i = 0; i < numRepetitions; i++) {
-        bambooBackgrounds.push(background);
-    }
-};
+// const addRepetitions = (background, numRepetitions) => {
+//     for (let i = 0; i < numRepetitions; i++) {
+//         bambooBackgrounds.push(background);
+//     }
+// };
 
-addRepetitions(background3, numRepetitions3);
-addRepetitions(background4, numRepetitions4);
-addRepetitions(background5, numRepetitions5);
+// addRepetitions(background3, numRepetitions3);
+// addRepetitions(background4, numRepetitions4);
+// addRepetitions(background5, numRepetitions5);
 
-const backgroundImageValue = backgrounds.join(",");
-const bambooBackgroundImageValue = bambooBackgrounds.join(",");
+// const backgroundImageValue = backgrounds.join(",");
+// const bambooBackgroundImageValue = bambooBackgrounds.join(",");
 
 
-document.querySelector(".floor").style.backgroundImage = backgroundImageValue;
-document.querySelector(".bamboo").style.backgroundImage =
-    bambooBackgroundImageValue;
+// document.querySelector(".floor").style.backgroundImage = backgroundImageValue;
+// document.querySelector(".bamboo").style.backgroundImage =
+//     bambooBackgroundImageValue;

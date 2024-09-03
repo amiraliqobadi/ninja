@@ -6,14 +6,14 @@ document.onkeydown = (e) => {
     e = e || window.event;
 
     if (e.keyCode == "68") {
-        left += 10;
+        left += 15;
         ninja.style.left = left + "px";
 
         ninja.classList.remove("ninja_stand_right", "ninja_stand_left");
         ninja.classList.add("ninja_walk_right");
         ninja.style.transform = "scaleX(1)";
     } else if (e.keyCode == "65") {
-        left -= 10;
+        left -= 15;
         ninja.style.left = left + "px";
 
         ninja.classList.remove("ninja_stand_right", "ninja_stand_left");
