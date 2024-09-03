@@ -1,0 +1,91 @@
+@font-face {
+    font-family: loading;
+    src: url(../fonts/Sickamore.ttf);
+}
+.loading {
+    font-family: loading;
+    color: red;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 40px;
+    margin: 40px;
+    display: none;
+}
+.level_container {
+    width: 100%;
+    height: 100%;
+}
+.level_one {
+    display: none;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 195, 143);
+    background: linear-gradient(
+        0deg,
+        rgba(34, 195, 143, 1) 0%,
+        rgba(8, 110, 43, 0.8869748583026961) 100%
+    );
+}
+.item {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+}
+.jump {
+    position: absolute;
+    width: 75px;
+    right: 0;
+    bottom: 0;
+    margin: 15px;
+}
+.ability {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.ability_4 {
+    bottom: 50%;
+    margin: 20px;
+}
+.ability_1 {
+    bottom: 50%;
+    right: 30%;
+}
+.ability_2 {
+    bottom: 30%;
+    right: 47%;
+}
+
+.ability_5 {
+    right: 50%;
+}
+.floor {
+    position: absolute;
+    width: 3000%;
+    height: 30%;
+    z-index: -1;
+    background-repeat: repeat-x, repeat-x;
+    background-position: top left;
+    bottom: 0;
+}
+.black_floor {
+    background-color: black;
+    height: 89%;
+    position: absolute;
+    width: 3000%;
+    bottom: 0;
+}
+
+.bamboo {
+    z-index: -10;
+    height: 75%;
+    width: 3000%;
+    position: absolute;
+    top: 0;
+}

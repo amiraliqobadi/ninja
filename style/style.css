@@ -1,134 +1,253 @@
 @font-face {
-    font-family: menuNumbers;
-    src: url(../assets/fonts/constan.ttf);
+    font-family: menuNumbers ;
+    src: url(../fonts/constan.ttf);
 }
 
-body {
+body{
     margin: 0;
     padding: 0;
-    background: #333;
+    background: #222;
+    user-select: none;
 }
 
-ul {
+ul{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.hide {
+.hide{
     display: none;
 }
 
-.show {
+.show{
     display: block;
 }
 
-#main {
-    width: 1200px;
+#main{
+    width: 1200PX;
     height: 675px;
     margin: 20px auto;
     background: #000;
     position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-#firstStartPage {
+#firstStartPage{
     width: 100%;
     height: 100%;
-    background: url(../assets/img/image.png) no-repeat 50% / contain;
+    background:url(../img/image.png) no-repeat 50% / contain;
 }
 
-#firstStartPage > .PlayBottom {
+#firstStartPage > .PlayBottom{
     width: 200px;
     height: 100px;
-    bottom: 110px;
+    bottom:110px;
     left: 250px;
     position: absolute;
     cursor: pointer;
 }
 
-#levelSelect {
+#mainMenu{
     width: 100%;
     height: 100%;
-    background: url(../assets/img/Layer_15_0.png) no-repeat 50% / 100%;
+    background:url(../img/Layer_15_0.png) no-repeat 50% / 130%;
+    border: 1px solid transparent;
+}
+
+#levelSelect{
+    width: 100%;
+    height: 100%;
     border: 1px solid transparent;
     font-family: menuNumbers;
 }
 
-#levelSelect > #mapSlider {
+
+#levelSelect > #mapSlider{
     width: 700px;
     height: 550px;
     margin: 100px auto 0;
     overflow: hidden;
 }
 
-#levelSelect > #mapSlider > .gallery {
-    height: 400px;
-    width: 100%;
-    background: url(../assets/img/mapSlider/01.png) no-repeat 50% / contain;
+#levelSelect > #playBtn:hover{
+    filter: brightness(80%);
 }
 
-#levelSelect > .mapMoveBtn {
-    width: 80px;
-    height: 150px;
-    background: no-repeat 50% / contain;
+#levelSelect > #playBtn{
+    color: #fff;
+    background: url(../img/play.png) no-repeat 50% / cover;
+    font-size: 30px;
+    height: 65px;
+    width: 250px;
     position: absolute;
-    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 67%;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    line-height: 65px;
+    display: none;
+    transition: .2s;
+}
+
+#levelSelect > #mapSlider > .gallery{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    left: 0%;
+}
+
+#levelSelect > #mapSlider > .gallery > .items{
+    width: 25%;
+    height: 100%;
+    background: no-repeat 0 0 / contain;
+}
+
+#levelSelect > #mapSlider > .gallery > .map1{
+    background-image: url(../img/mapSlider/01.png);
+}
+
+#levelSelect > #mapSlider > .gallery > .map2{
+    background-image: url(../img/mapSlider/02.png);
+}
+
+#levelSelect > #mapSlider > .gallery > .map3{
+    background-image: url(../img/mapSlider/03.png);
+}
+
+#levelSelect > #mapSlider > .gallery > .map4{
+    background-image: url(../img/mapSlider/04.png);
+}
+
+#levelSelect > #mapSlider > .gallery .levels{
+    width: 100%;
+    height: 120px;
+    position: relative;
+    top:420px;
+    overflow: hidden;
+}
+
+#levelSelect > #mapSlider > .gallery .levels > .levelGallery{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 11px;
+    position: relative;
+    left: 0;
+}
+
+
+#levelSelect > #mapSlider > .gallery .levels i{
+    display: block;
+    height: 100%;
+    width: 120px;
+    scale: 0.95;
+    background: linear-gradient(#222 70%, #333);
+    font-size: 40px;
+    color: #fff;
+    line-height: 110px;
+    text-align: center;
+    border-radius: 10px;
+    font-style: normal;
+    border: 1px solid #555;
+    transition: .2s;
+}
+
+#levelSelect > #mapSlider > .gallery .levels .unlocked:hover{
+    scale: .9;
+}
+
+#levelSelect > #mapSlider > .gallery .levels .unlocked{
     cursor: pointer;
 }
 
-#levelSelect > .mapMoveRightBtn {
-    right: 150px;
-    background-image: url(../assets/img/mapSlider/right.png);
+#levelSelect > #mapSlider > .gallery .levels i.selected{
+    box-shadow: 0 0 5px 1.5px rgb(255, 239, 146);
 }
 
-#levelSelect > .mapMoveLeftBtn {
-    left: 150px;
-    background-image: url(../assets/img/mapSlider/lret.png);
+#levelSelect > #mapSlider > .gallery .levels i.lock{
+    color: transparent;
+    background: url(../img/khoa.png) no-repeat 60% 50% #090909;
 }
 
-#levelSelect > .menuPlayerItems {
+#levelSelect > .mapMoveBtn:hover{
+    filter: brightness(80%);
+}
+
+#levelSelect > .mapMoveBtn{
+    width: 130px;
+    height: 170px;
+    background:no-repeat 50% / contain;
+    position: absolute;
+    top: 210px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+#levelSelect > .mapMoveRightBtn{
+   right: 130px;
+   background-image: url(../img/mapSlider/right.png);
+}
+
+#levelSelect > .mapMoveLeftBtn{
+   left: 130px;
+   background-image: url(../img/mapSlider/lret.png);
+}
+
+#levelSelect > .menuPlayerItems{
     width: fit-content;
     min-width: 100px;
     height: 70px;
-    background: no-repeat 0 50% / 60px;
+    background:no-repeat 0 50% / 60px;
     position: absolute;
-    left: 5px;
+    left: 8px;
     text-indent: 65px;
     line-height: 70px;
     font-size: 23px;
     font-weight: 600;
 }
 
-#levelSelect > #coin {
-    background-image: url(../assets/img/tien.png);
+#levelSelect > #coin{
+    background-image:  url(../img/tien.png) ;
+    background-size: 80px;
+    left: -2px;
+    text-indent: 80px;
     top: 0px;
-    color: #ffe300;
+    color:#ffe300;
 }
 
-#levelSelect > #diamond {
-    background-image: url(../assets/img/kim_cuong.png);
-    top: 70px;
-    color: #01f2fd;
+#levelSelect > #diamond{
+    background-image:  url(../img/kim_cuong.png) ;
+    top: 60px;
+    text-indent: 70px;
+    color:#01f2fd;
 }
 
-#levelSelect > #letter {
-    background-image: url(../assets/img/cuon-giay.png);
-    top: 140px;
-    color: #00ff21;
+#levelSelect > #letter{
+    background-image:  url(../img/cuon-giay.png) ;
+    background-size: 50px;
+    left: 13px;
+    top: 120px;
+    color:#00ff21;
 }
 
-#levelSelect > #settings {
-    background: url(../assets/img/settings.png) no-repeat 50% / contain;
-    width: 80px;
-    height: 80px;
+#levelSelect > #settings{
+    background:url(../img/settings.png) no-repeat 50% / contain;
+    width: 65px;
+    height: 65px;
     position: absolute;
     bottom: 20px;
     right: 20px;
     cursor: pointer;
 }
 
-#levelSelect > #shopup {
-    background: url(../assets/img/shopup.png) no-repeat 50% / contain;
+#levelSelect > #shopup{
+    background:url(../img/shopup.png) no-repeat 50% / contain;
     width: 150px;
     height: 120px;
     position: absolute;
@@ -136,3 +255,37 @@ ul {
     right: 20px;
     cursor: pointer;
 }
+
+#settingsMenu{
+    height: 450px;
+    width: 350px;
+    background: url(../img/settingsMenu/Bang.png) no-repeat 50% / cover;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#settingsMenu > ul{
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    font-size: 27px;
+    color: #330c00;
+    margin-top: 60px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#settingsMenu > ul > li:hover{
+    filter: brightness(80%);
+}
+
+#settingsMenu > ul > li{
+    height: 50px;
+    width: 200px;
+    background: url(../img/settingsMenu/dai.png) no-repeat 50% / cover;
+    cursor: pointer;
+    transition: .2s;
+}
+
