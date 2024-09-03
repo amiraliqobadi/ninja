@@ -100,6 +100,7 @@ playBtn.addEventListener("click", () => {
     setTimeout(() => {
         loading.style.display = "none";
         levelAudio.play();
+        levelAudio.volume = 0;
         levelContainer.style.display = "block";
         levelOne.style.display = "block";
     }, 3000);
