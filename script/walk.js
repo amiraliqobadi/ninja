@@ -49,6 +49,8 @@ document.onkeydown = (e) => {
         jumpCount++;
         bottom += 25;
         ninja.style.bottom = bottom + "%";
+        ninja.classList.remove("ninja_stand_right");
+        ninja.classList.add("ninja_jump");
         clearInterval(gravityInterval);
         gravityInterval = null;
     }

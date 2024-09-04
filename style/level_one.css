@@ -93,32 +93,41 @@
     top: 0;
 }
 .ninja {
-    width: 200px;
-    height: 100px;
+    width: 100px;
+    height: 190px;
     background: no-repeat center / cover;
     z-index: 1;
     position: absolute;
     bottom: 26%;
     left: 10px;
     transition: bottom 0.3s;
+    filter: brightness(0);
+    background:  no-repeat 0 70px / contain;
 }
 .ninja_stand_right {
-    background-image: url(../img/stand/stand.svg);
-    background-size: contain;
+    background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/idle.gif);
 }
 
 .ninja_walk_right {
-    animation: walkRight 1s alternate infinite;
+    background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/run.gif);
 }
 
-@keyframes walkRight {
-    0% {
+.ninja_jump {
+    background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/jump.gif);
+}
+
+.ninja_fall {
+    background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/fall.gif);
+}
+
+/* @keyframes walkRight {
+    12.5% {
         background-image: url(../img/walkRight/1_walk.svg);
     }
-    20% {
+    25% {
         background-image: url(../img/walkRight/2_walk.svg);
     }
-    40% {
+    37.5% {
         background-image: url(../img/walkRight/3_walk.svg);
     }
     60% {
@@ -130,4 +139,4 @@
     100% {
         background-image: url(../img/walkRight/6_walk.svg);
     }
-}
+} */
