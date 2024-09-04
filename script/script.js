@@ -5,6 +5,13 @@ const mapMoveRightBtn = document.querySelector(
 );
 const mapMoveLeftBtn = document.querySelector("#levelSelect > .mapMoveLeftBtn");
 const MainMenuLevels = document.querySelectorAll(".unlocked");
+const allClick = document.querySelectorAll(".clickSound")
+
+allClick.forEach((allClick) => {
+    allClick.addEventListener("click", () => {
+        auAllClick.play();
+    });
+});
 
 auEvent1.play();
 auMenu.volume = 0.7;
@@ -62,7 +69,7 @@ MainMenuLevels.forEach((MainMenuLevels) => {
 });
 
 settings.onclick = () => {
-    settingsMenu.className = "show";
+    settingsMenu.classList.replace("hide", "show");
     levelSelect.className = "hide";
     playBtn.style.display = "none";
 
@@ -97,51 +104,33 @@ playBtn.addEventListener("click", () => {
     loading.style.display = "block";
     auEvent1.pause();
     auMenu.pause();
+    auMenu.currentTime = 0;
     setTimeout(() => {
         loading.style.display = "none";
         levelAudio.play();
-        levelAudio.volume = 0;
+        levelAudio.volume = 0.7;
         levelContainer.style.display = "block";
         levelOne.style.display = "block";
-    }, 10);
+    }, 2000);
 });
 
-// const background1 = "url('../img/level_one/co2.png')";
-// const background2 = "url('../img/level_one/co1.png')";
-// const background3 = "url('../img/level_one/trucxanhdam1.png')";
-// const background4 = "url('../img/level_one/trucxanhdam2.png')";
-// const background5 = "url('../img/level_one/trucxanhdam3.png')";
+backToMM.addEventListener("click", () => {
+    loading.style.display = "block";
+    levelContainer.style.display = "block";
+    levelOne.style.display = "none";
+    levelAudio.pause();
+    pauseMenu.classList.replace("show", "hide");
+    setTimeout(() => {
+        mainMenu.style.display = "block";
+        loading.style.display = "none";
+        auMenu.play();
+    }, 500);
+});
 
-// const numRepetitions1 = Math.floor(Math.random() * 5) + 1;
-// const numRepetitions2 = Math.floor(Math.random() * 5) + 1;
-// const numRepetitions3 = Math.floor(Math.random() * 5) + 1;
-// const numRepetitions4 = Math.floor(Math.random() * 5) + 1;
-// const numRepetitions5 = Math.floor(Math.random() * 5) + 1;
+pauseBtn.onclick = () =>{
+    pauseMenu.classList.replace("hide", "show");
+}
+resumeBtn.onclick = () =>{
+    pauseMenu.classList.replace("show", "hide");
+}
 
-// const backgrounds = [];
-// const bambooBackgrounds = [];
-
-// for (let i = 0; i < numRepetitions1; i++) {
-//     backgrounds.push(background1);
-// }
-// for (let i = 0; i < numRepetitions2; i++) {
-//     backgrounds.push(background2);
-// }
-
-// const addRepetitions = (background, numRepetitions) => {
-//     for (let i = 0; i < numRepetitions; i++) {
-//         bambooBackgrounds.push(background);
-//     }
-// };
-
-// addRepetitions(background3, numRepetitions3);
-// addRepetitions(background4, numRepetitions4);
-// addRepetitions(background5, numRepetitions5);
-
-// const backgroundImageValue = backgrounds.join(",");
-// const bambooBackgroundImageValue = bambooBackgrounds.join(",");
-
-
-// document.querySelector(".floor").style.backgroundImage = backgroundImageValue;
-// document.querySelector(".bamboo").style.backgroundImage =
-//     bambooBackgroundImageValue;

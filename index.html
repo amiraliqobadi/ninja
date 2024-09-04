@@ -3,7 +3,7 @@
     <head>
         <title>ninja arashi</title>
         <link rel="stylesheet" href="style/style.css" />
-        <link rel="stylesheet" href="./style/level_one.css" />
+        <link rel="stylesheet" href="style/level_one.css" />
     </head>
     <body>
         <audio id="auEvent1" src="audio/mp3/event1.mp3"></audio>
@@ -13,6 +13,7 @@
             src="./audio/level_one/0.wav"
             loop="loop"
         ></audio>
+        <audio id="auAllClick" src="audio/Click5.wav"></audio>
         <div id="main">
             <!-- first page -->
 
@@ -24,7 +25,7 @@
 
             <div id="mainMenu">
                 <div id="levelSelect" class="hide">
-                    <div id="playBtn">Play</div>
+                    <div id="playBtn" class="clickSound">Play</div>
                     <div id="mapSlider">
                         <div class="gallery">
                             <div class="items map1">
@@ -64,24 +65,20 @@
                                 <div class="levels">
                                     <div class="levelGallery">
                                         <i class="lock">1</i>
-                                        <i class="lock">2</i>
-                                        <i class="lock">3</i>
-                                        <i class="lock">4</i>
-                                        <i class="lock">5</i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mapMoveRightBtn mapMoveBtn"></div>
-                    <div class="mapMoveLeftBtn mapMoveBtn"></div>
+                    <div class="mapMoveRightBtn mapMoveBtn clickSound"></div>
+                    <div class="mapMoveLeftBtn mapMoveBtn clickSound"></div>
 
                     <div id="coin" class="menuPlayerItems">0</div>
                     <div id="diamond" class="menuPlayerItems">0</div>
                     <div id="letter" class="menuPlayerItems">0</div>
-                    <div id="settings"></div>
+                    <div id="settings" class="clickSound"></div>
 
-                    <div id="shopup"></div>
+                    <div id="shopup" class="clickSound"></div>
                 </div>
 
                 <!-- settings page -->
@@ -89,10 +86,10 @@
                 <div id="settingsMenu" class="hide">
                     <ul>
                         <li>Rate us</li>
-                        <li id="musicChange">Music: On</li>
+                        <li id="musicChange" class="clickSound">Music: On</li>
                         <li>Ads setting</li>
                         <li>Privacy Policy</li>
-                        <li id="backBtn">Back</li>
+                        <li id="backBtn" class="clickSound">Back</li>
                     </ul>
                 </div>
             </div>
@@ -105,15 +102,25 @@
                 <!-- level one -->
 
                 <div class="level_one" id="levelOne">
+                    <div id="levelOneBg"></div>
                     <div id="ninja" class="ninja ninja_stand_right"></div>
-                    <div class="floor">
+                    <div class="floor" id="floor">
                         <div class="black_floor"></div>
                     </div>
                     <div id="jumpBtn" class="ability jump"></div>
                     <div class="ability miniabs a1"></div>
                     <div class="ability miniabs a2"></div>
                     <div class="ability miniabs a3"></div>
-
+                    <div class="pause clickSound" id="pauseBtn"></div>
+                    <div id="pauseMenu" class="hide">
+                        <ul>
+                            <p>pause</p>
+                            <li id="resumeBtn" class="clickSound">resume</li>
+                            <li>restart</li>
+                            <li>settings</li>
+                            <li id="backToMM" class="clickSound">main menu</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,30 +2,48 @@ let ninja = document.getElementById("ninja");
 
 let left = 0;
 
+let leftBg = 0
+
+ninjaMoveAnim = (num) =>{
+    ninja.style.transform = `scaleX(${num})`;
+}
+
+ninjaStopMove = (removeVar, addVar) =>{
+    ninja.classList.remove(`${removeVar}`);
+    ninja.classList.add(`${addVar}`);
+}
+
 document.onkeydown = (e) => {
     e = e || window.event;
 
     if (e.keyCode == "68") {
-        left += 15;
-        ninja.style.left = left + "px";
-
-        ninja.classList.remove("ninja_stand_right", "ninja_stand_left");
-        ninja.classList.add("ninja_walk_right");
-        ninja.style.transform = "scaleX(1)";
-    } else if (e.keyCode == "65") {
         left -= 15;
-        ninja.style.left = left + "px";
+        leftBg -= 3;
 
-        ninja.classList.remove("ninja_stand_right", "ninja_stand_left");
-        ninja.classList.add("ninja_walk_right");
-        ninja.style.transform = "scaleX(-1)";
+        floor.style.left = left + "px";
+        levelOneBg.style.left = leftBg + "px";
+
+        ninjaMoveAnim(1)
+        ninjaStopMove(["ninja_stand_right", "ninja_stand_left"], ["ninja_walk_right"])
+    } else if (e.keyCode == "65" && left != 0) {
+        left += 15;
+        leftBg += 3;
+
+        floor.style.left = left + "px";
+        levelOneBg.style.left = leftBg + "px";
+
+        ninjaMoveAnim(-1)
+        ninjaStopMove(["ninja_stand_right", "ninja_stand_left"], ["ninja_walk_right"])
+    }
+    else if (e.keyCode == "65") {
+        ninjaMoveAnim(-1)
+        ninjaStopMove(["ninja_stand_right", "ninja_stand_left"], ["ninja_walk_right"])
     }
 };
 
 document.onkeyup = (e) => {
     if (e.keyCode == "68" || e.keyCode == "65") {
-        ninja.classList.remove("ninja_walk_right");
-        ninja.classList.add("ninja_stand_right");
+        ninjaStopMove(["ninja_walk_right"], ["ninja_stand_right"])
     }
 };
 
@@ -44,11 +62,11 @@ jumpNinja = () =>{
     }
 }
 
-window.addEventListener("keydown", (e) => {
-    if(e.keyCode == 32){
-        jumpNinja();
-    }
-})
+// window.addEventListener("keydown", (e) => {
+//     if(e.keyCode == 32){
+//         jumpNinja();
+//     }
+// })
 
 jumpBtn.onclick = function(){
     jumpNinja();
