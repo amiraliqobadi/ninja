@@ -45,7 +45,7 @@ document.onkeydown = (e) => {
         ninja.classList.add("ninja_walk_right");
         ninja.style.transform = "scaleX(-1)";
     }
-    if (keys[87] && jumpCount < 2) {
+    if (keys[32] && jumpCount < 2) {
         jumpCount++;
         bottom += 25;
         ninja.style.bottom = bottom + "%";
@@ -64,7 +64,7 @@ document.onkeyup = (e) => {
         }
     }
 
-    if (!keys[87]) {
+    if (!keys[32]) {
         startGravity();
     }
 };

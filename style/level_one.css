@@ -99,11 +99,11 @@
     z-index: 1;
     position: absolute;
     bottom: 26%;
-    left: 10%;
-    transition: all 1s infinite;
+    left: 10px;
+    transition: bottom 0.3s;
 }
 .ninja_stand_right {
-    background-image: url("../img/stand/stand.svg");
+    background-image: url(../img/stand/stand.svg);
     background-size: contain;
 }
 
@@ -113,21 +113,21 @@
 
 @keyframes walkRight {
     0% {
-        background-image: url("../img/walkRight/1_walk.svg");
+        background-image: url(../img/walkRight/1_walk.svg);
     }
     20% {
-        background-image: url("../img/walkRight/2_walk.svg");
+        background-image: url(../img/walkRight/2_walk.svg);
     }
     40% {
-        background-image: url("../img/walkRight/3_walk.svg");
+        background-image: url(../img/walkRight/3_walk.svg);
     }
     60% {
-        background-image: url("../img/walkRight/4_walk.svg");
+        background-image: url(../img/walkRight/4_walk.svg);
     }
     80% {
-        background-image: url("../img/walkRight/5_walk.svg");
+        background-image: url(../img/walkRight/5_walk.svg);
     }
     100% {
-        background-image: url("../img/walkRight/6_walk.svg");
+        background-image: url(../img/walkRight/6_walk.svg);
     }
 }
