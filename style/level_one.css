@@ -136,17 +136,3 @@
     }
 }
 
-.jump {
-    animation: jump 1s linear forwards;
-}
-@keyframes jump {
-    0% {
-        bottom: 26%;
-    }
-    50% {
-        bottom: 31%;
-    }
-    100% {
-        bottom: 26%;
-    }
-}
