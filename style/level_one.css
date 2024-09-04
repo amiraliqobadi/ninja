@@ -31,6 +31,7 @@
     cursor: pointer;
     background: no-repeat 50% / contain;
     z-index: 5;
+    opacity: 0.7;
 }
 
 .jump {
@@ -98,11 +99,12 @@
     background: no-repeat center / cover;
     z-index: 1;
     position: absolute;
-    bottom: 26%;
+    bottom: 180px;
     left: 10px;
     transition: bottom 0.3s;
     filter: brightness(0);
     background:  no-repeat 0 70px / contain;
+    
 }
 .ninja_stand_right {
     background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/idle.gif);
@@ -113,7 +115,26 @@
 }
 
 .ninja_jump {
-    background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/jump.gif);
+    animation: ninjaJump 0.8s linear;
+    transition: 0.2s;
+}
+
+@keyframes ninjaJump {
+    0%{
+        bottom: 200px;
+        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/jump.gif);
+    }
+    50%{
+        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/jump.gif);
+        bottom: 350px;
+    }
+    55%{
+        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/fall.gif);
+    }
+    100%{
+        bottom: 160px;
+        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/fall.gif);
+    }
 }
 
 .ninja_fall {
