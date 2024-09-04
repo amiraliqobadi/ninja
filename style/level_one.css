@@ -24,12 +24,6 @@
     height: 100%;
     background: url(../img/bg2.jpg) repeat-x 0 0 / contain;
 }
-.item {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-}
 
 .ability {
     position: absolute;
@@ -77,13 +71,15 @@
     width: 3000%;
     height: 30%;
     z-index: -1;
-    background-repeat: repeat-x, repeat-x;
-    background-position: top left;
-    bottom: 0;
+    bottom: 0;  
+    background:url(../img/level_one/co1.png)repeat-x 0 2px,
+    url(../img/level_one/co2.png) repeat-x 10px -1px,
+    url(../img/level_one/codai2.png) 0 -10px / 300px;
 }
-.black_floor {
-    background-color: black;
-    height: 89%;
+
+.black_floor{
+    background: #000;
+    height: 88%;
     position: absolute;
     width: 3000%;
     bottom: 0;
