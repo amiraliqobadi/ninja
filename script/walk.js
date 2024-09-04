@@ -1,14 +1,15 @@
 let ninja = document.getElementById("ninja");
 let left = 0;
 let bottom = 26;
-let isJumping = false;
+let jumpCount = 0;
 let gravity = 2;
 let gravityInterval;
 let keys = {};
+let gravityTime = 60;
 
 function startGravity() {
     if (!gravityInterval) {
-        gravityInterval = setInterval(applyGravity, 60);
+        gravityInterval = setInterval(applyGravity, 80);
     }
 }
 
@@ -19,7 +20,7 @@ function applyGravity() {
             bottom = 26;
             clearInterval(gravityInterval);
             gravityInterval = null;
-            isJumping = false;
+            jumpCount = 0;
             ninja.classList.add("ninja_stand_right");
         }
         ninja.style.bottom = bottom + "%";
@@ -31,23 +32,22 @@ document.onkeydown = (e) => {
     keys[e.keyCode] = true;
 
     if (keys[68]) {
-        isJumping === true ? (left += 50) : (left += 15);
+        jumpCount > 0 ? (left += 20) : (left += 15);
         ninja.style.left = left + "px";
         ninja.classList.remove("ninja_stand_right");
         ninja.classList.add("ninja_walk_right");
         ninja.style.transform = "scaleX(1)";
     }
     if (keys[65]) {
-        isJumping === true ? (left -= 50) : (left -= 15);
-
+        jumpCount > 0 ? (left -= 20) : (left -= 15);
         ninja.style.left = left + "px";
         ninja.classList.remove("ninja_stand_right");
         ninja.classList.add("ninja_walk_right");
         ninja.style.transform = "scaleX(-1)";
     }
-    if (keys[87] && !isJumping) {
-        isJumping = true;
-        bottom += 50;
+    if (keys[87] && jumpCount < 2) {
+        jumpCount++;
+        bottom += 25;
         ninja.style.bottom = bottom + "%";
         clearInterval(gravityInterval);
         gravityInterval = null;
@@ -59,7 +59,7 @@ document.onkeyup = (e) => {
     keys[e.keyCode] = false;
     if (!keys[65] && !keys[68]) {
         ninja.classList.remove("ninja_walk_right");
-        if (bottom === 26 && !isJumping) {
+        if (bottom === 26 && jumpCount === 0) {
             ninja.classList.add("ninja_stand_right");
         }
     }
