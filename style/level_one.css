@@ -99,7 +99,7 @@
     background: no-repeat center / cover;
     z-index: 1;
     position: absolute;
-    bottom: 180px;
+    bottom: 173px;
     left: 10px;
     transition: bottom 0.3s;
     filter: brightness(0);
@@ -116,7 +116,6 @@
 
 .ninja_jump {
     animation: ninjaJump 0.8s linear;
-    transition: 0.2s;
 }
 
 @keyframes ninjaJump {
