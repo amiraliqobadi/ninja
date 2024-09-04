@@ -28,10 +28,10 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    opacity: .8;
+    opacity: 0.8;
 }
 
-.ability{
+.ability {
     position: absolute;
     height: 100px;
     cursor: pointer;
@@ -49,7 +49,7 @@
     background: url(../img/level_one/up_d1.png) no-repeat 50% / contain;
 }
 
-.miniabs{
+.miniabs {
     position: absolute;
     height: 90px;
     width: 90px;
@@ -103,16 +103,16 @@
     z-index: 1;
     position: absolute;
     bottom: 26%;
-    left: 0;
+    left: 10%;
+    transition: all 0.2s ease-in-out;
 }
-
 .ninja_stand_right {
     background-image: url("../img/stand/stand.svg");
     background-size: contain;
 }
 
 .ninja_walk_right {
-    animation: walkRight .3s alternate infinite;
+    animation: walkRight 0.3s alternate infinite;
 }
 
 @keyframes walkRight {
@@ -133,5 +133,20 @@
     }
     100% {
         background-image: url("../img/walkRight/6_walk.svg");
+    }
+}
+
+.jump {
+    animation: jump 1s linear forwards;
+}
+@keyframes jump {
+    0% {
+        bottom: 26%;
+    }
+    50% {
+        bottom: 31%;
+    }
+    100% {
+        bottom: 26%;
     }
 }
