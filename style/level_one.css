@@ -24,7 +24,7 @@
     height: 100%;
 }
 
-#levelOneBg{
+#levelOneBg {
     background: url(../img/bg2.jpg) repeat-x 0 0 / contain;
     height: 100%;
     width: 3000%;
@@ -79,13 +79,13 @@
     width: 3000%;
     height: 30%;
     z-index: -1;
-    bottom: 0;  
-    background:url(../img/level_one/co1.png)repeat-x 0 2px,
-    url(../img/level_one/co2.png) repeat-x 10px -1px,
-    url(../img/level_one/codai2.png) 0 -10px / 300px;
+    bottom: 0;
+    background: url(../img/level_one/co1.png) repeat-x 0 2px,
+        url(../img/level_one/co2.png) repeat-x 10px -1px,
+        url(../img/level_one/codai2.png) 0 -10px / 300px;
 }
 
-.black_floor{
+.black_floor {
     background: #000;
     height: 88%;
     position: absolute;
@@ -110,9 +110,9 @@
     left: 50px;
     transition: bottom 0.3s;
     filter: brightness(0);
-    background:  no-repeat 0 70px / contain;
-    
+    background: no-repeat 0 70px / contain;
 }
+
 .ninja_stand_right {
     background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/idle.gif);
 }
@@ -122,43 +122,40 @@
 }
 
 .ninja_jump {
-    animation: ninjaJump 0.8s linear;
-}
-
-@keyframes ninjaJump {
-    0%{
-        bottom: 200px;
-        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/jump.gif);
-    }
-    50%{
-        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/jump.gif);
-        bottom: 350px;
-    }
-    55%{
-        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/fall.gif);
-    }
-    100%{
-        bottom: 160px;
-        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/fall.gif);
-    }
+    background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/jump.gif);
 }
 
 .ninja_fall {
     background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/fall.gif);
 }
 
-.pause{
+@keyframes ninjaJump {
+    0% {
+        bottom: 173px;
+        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/jump.gif);
+    }
+    50% {
+        bottom: 350px;
+        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/jump.gif);
+    }
+    100% {
+        bottom: 173px;
+        background-image: url(../img/ninjaFrames/Martial\ Hero/Sprites/fall.gif);
+    }
+}
+
+.pause {
     background: url(/img/level_one/pause.png) no-repeat 50% / contain;
     position: absolute;
     right: 10px;
     top: 10px;
     height: 70px;
     width: 70px;
-    opacity: .8;
+    opacity: 0.8;
     cursor: pointer;
 }
 
-#pauseMenu{
+#pauseMenu {
     height: 450px;
     width: 350px;
     background: url(../img/settingsMenu/Bang.png) no-repeat 50% / cover;
@@ -171,7 +168,7 @@
     transform: translate(-50%, -50%) scale(1.3);
 }
 
-#pauseMenu > ul{
+#pauseMenu > ul {
     display: flex;
     flex-flow: column;
     gap: 20px;
@@ -184,19 +181,19 @@
     transform: translate(20%, 20%);
 }
 
-#pauseMenu > ul > li:hover{
+#pauseMenu > ul > li:hover {
     filter: brightness(80%);
 }
 
-#pauseMenu > ul > li{
+#pauseMenu > ul > li {
     height: 52px;
     width: 210px;
     background: url(../img/settingsMenu/dai.png) no-repeat 50% / cover;
     cursor: pointer;
-    transition: .2s;
+    transition: 0.2s;
 }
 
-#pauseMenu > ul > p{
+#pauseMenu > ul > p {
     color: #000;
     font-size: 28px;
     position: absolute;
