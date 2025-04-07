@@ -7,8 +7,7 @@ A Ninja Harashi Game With Html Css Js.
 ## Authors
 
 - [amiraliqobadi](https://www.github.com/octokatherine)
-- [mehrzad-nava](https://github.com/mehrzad-nava)
-- [plooooof](https://github.com/plooooof)
+
 
 
 ## Features
